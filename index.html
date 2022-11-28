@@ -1,0 +1,69 @@
+<!--CMPS3141-HCI - AS2-21S1
+Collaborators: Joanne Yong 
+Date: Sept.8.21
+ -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://get.mavo.io/mavo.css" />
+		<script src="https://get.mavo.io/mavo.js"></script>
+		<title></title>
+	</head>
+	<body>
+	
+		<h1><u>Border Generator</u></h1>
+		<!-- add your demo html and mavo here -->
+		<div mv-app="BorderGenerator" mv-bar="none">
+	<div class="controls">
+		<label>Top Border: <input type="range" property="bordertopwidth" max="25" min="0" value="0"></label>
+		<label>Bottom Border: <input type="range" property="borderbottomwidth" max="25" min="0" value="0"></label>
+		<label>Left Border: <input type="range" property="borderleftwidth" max="25" min="0" value="0"></label>
+		<label>Right Border: <input type="range" property="borderrightwidth" max="25" min="0" value="0"></label>
+		
+		<div class="grid">
+			Style: 
+			<div class="spread">
+			
+					<select id="borderStyle" name="BorderStyle" property="borderstyle">
+					<option>Solid</option>
+					<option>Dotted</option>
+					<option>Dashed</option>
+					<option>Double</option>
+					<option>Groove</option>
+					<option>Ridge</option>
+					<option>Inset</option>
+					<option>Outset</option>
+					<option>None</option>
+			
+		</select>
+
+			
+			</div>
+		</div>
+		<div>
+			<label>
+			Color:              
+				<input type="color" property="bordercolor" />
+			</label>
+		</div>
+		<div>
+		<style>
+		
+		.image {
+		border: [borderstyle] [bordercolor]; 
+		border-width: [bordertopwidth]px [borderrightwidth]px [borderbottomwidth]px [borderleftwidth]px;
+	   }
+		</style>
+		</div> 
+		
+	</div>
+	<img src= "../exercise-2/mountainImage.jpg"  alt="Mountain Picture" width="240" height="190" class="image">
+</div>
+
+
+
+
+	</body>
+</html>
