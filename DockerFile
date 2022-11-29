@@ -1,14 +1,14 @@
 FROM golang:1.16-alpine
 
-WORKDIR /backend
+WORKDIR /app
 
-COPY . /backend
+COPY . /app
 COPY . ./
 RUN go mod download
 
 
-RUN go build -o /api-backend ./
+RUN go build -o /webapp ./
 EXPOSE 4000
 
-CMD [ "/api-backend"]
+CMD [ "/webapp"]
 
